@@ -1,8 +1,14 @@
+# Folder
+.vscode/
 /target
-**/*.rs.bk
-Cargo.lock
 bin/
 pkg/
 dist/
+
+# Files
+**/*.rs.bk
+Cargo.lock
 wasm-pack.log
 node_modules
+package-lock.json
+**/app.notes.rs

@@ -5,8 +5,9 @@ use strum_macros::{EnumIter, ToString};
 use yew::format::Json;
 use yew::services::storage::{Area, StorageService};
 use yew::prelude::*;
+use kpdb::{CompositeKey, Database, Entry, Group};
 
-const KEY: &str = "yew.todomvc.self";
+const KEY: &str = "com.sts.rustpass.self";
 
 pub struct App {
     link: ComponentLink<Self>,
@@ -115,41 +116,39 @@ impl Component for App {
         true
     }
 
+    /**
+     * View Lifecycle
+     * 
+     * Creates App Dom for hosted Components
+     */
     fn view(&self) -> Html {
         info!("rendered!");
         html! {
-            <div class="todomvc-wrapper">
-                <section class="todoapp">
-                    <header class="header">
-                        <h1>{ "todos" }</h1>
-                        { self.view_input() }
-                    </header>
-                    <section class="main">
-                        <input class="toggle-all" type="checkbox" checked=self.state.is_all_completed() onclick=self.link.callback(|_| Msg::ToggleAll) />
-                        <ul class="todo-list">
-                            { for self.state.entries.iter().filter(|e| self.state.filter.fit(e))
-                                .enumerate()
-                                .map(|val| self.view_entry(val)) }
-                        </ul>
-                    </section>
-                    <footer class="footer">
-                        <span class="todo-count">
-                            <strong>{ self.state.total() }</strong>
-                            { " item(s) left" }
-                        </span>
-                        <ul class="filters">
-                            { for Filter::iter().map(|flt| self.view_filter(flt)) }
-                        </ul>
-                        <button class="clear-completed" onclick=self.link.callback(|_| Msg::ClearCompleted)>
-                            { format!("Clear completed ({})", self.state.total_completed()) }
-                        </button>
-                    </footer>
-                </section>
-                <footer class="info">
-                    <p>{ "Double-click to edit a todo" }</p>
-                    <p>{ "Written by " }<a href="https://github.com/DenisKolodin/" target="_blank">{ "Denis Kolodin" }</a></p>
-                    <p>{ "Part of " }<a href="http://todomvc.com/" target="_blank">{ "TodoMVC" }</a></p>
-                </footer>
+            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+                <header class="mdl-layout__header">
+                    <div class="mdl-layout__header-row">
+                        <div class="mdl-layout-spacer"/>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                            <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                                <i class="material-icons">{ "search" }</i>
+                            </label>
+                            <div class="mdl-textfield__expandable-holder">
+                                <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp"/>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="mdl-layout__drawer">
+                    <span class="mdl-layout-title">{ "Rustpass" }</span>
+                    <nav class="mdl-navigation">
+                    // Here is the folder tree
+                    </nav>
+                </div>
+                <main class="mdl-layout__content">
+                    <div class="page-content">
+                    // Page Content here
+                    </div>
+                </main>
             </div>
         }
     }

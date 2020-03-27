@@ -1,29 +1,12 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5ba03ba7-ff8b-4c54-94e7-cd5fd76a6737/deploy-status)](https://app.netlify.com/sites/yew-todomvc/deploys)
+# Rustpass
 
-## About
+Rustpass is a Webapplication to Read and Edit Keepass2.x Databases.
+It uses WASM (Web Assembly) to achieve native performance on de-/encryption tasks.
+To achieve high security while keeping a good development experience, we use RUST as programming language.
+This project was built with the [yewstack](https://yew.rs/docs).
 
-This template shows how to create a web app using Yew and wasm-pack. 
-
-## 🚴 Usage
-
-### 🛠️ Build with `yarn run build`
-
+## Run Project
+Just use the npm task to start the development server with hot reloading:
 ```
-yarn run build
+npm run start:dev
 ```
-
-### 🔬 Serve locally with `yarn run start:dev`
-
-```
-yarn run start:dev
-```
-
-
-## 🔋 Batteries Included
-
-* [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen) for communicating
-  between WebAssembly and JavaScript.
-* [`console_error_panic_hook`](https://github.com/rustwasm/console_error_panic_hook)
-  for logging panic messages to the developer console.
-* [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
-  for small code size.
