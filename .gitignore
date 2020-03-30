@@ -4,6 +4,7 @@
 bin/
 pkg/
 dist/
+test/
 
 # Files
 **/*.rs.bk
@@ -12,3 +13,4 @@ wasm-pack.log
 node_modules
 package-lock.json
 **/app.notes.rs
+**.kdbx
