@@ -1,3 +1,5 @@
+extern crate keepass;
+
 use log::*;
 use serde_derive::{Deserialize, Serialize};
 use strum::IntoEnumIterator;
@@ -5,7 +7,8 @@ use strum_macros::{EnumIter, ToString};
 use yew::format::Json;
 use yew::services::storage::{Area, StorageService};
 use yew::prelude::*;
-use kpdb::{CompositeKey, Database, Entry, Group};
+
+use keepass::{Database, Node, Result, Error};
 
 const KEY: &str = "com.sts.rustpass.self";
 

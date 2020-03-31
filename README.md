@@ -6,6 +6,11 @@ To achieve high security while keeping a good development experience, we use RUS
 This project was built with the [yewstack](https://yew.rs/docs).
 
 ## Run Project
+Ensure you have installed ```wasm-pack``` with cargo
+Next you need to install all node modules by running:
+```
+npm i
+```
 Just use the npm task to start the development server with hot reloading:
 ```
 npm run start:dev
