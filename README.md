@@ -1,3 +1,6 @@
+![Node.js CI](https://github.com/Duke194/Rustpass/workflows/Node.js%20CI/badge.svg?branch=master)
+[![Build Status](https://travis-ci.org/Duke194/Rustpass.svg?branch=master)](https://travis-ci.org/Duke194/Rustpass)
+
 # Rustpass
 
 Rustpass is a Webapplication to Read and Edit Keepass2.x Databases.
