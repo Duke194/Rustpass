@@ -15,9 +15,8 @@ serde = "1"
 serde_derive = "1"
 wasm-bindgen = "0.2.58"
 web_logger = "0.2"
-yew = { version = "0.13", features = ["web_sys"] }
+yew = { version = "0.14.2", features = ["web_sys"] }
 keepass = "0.4.6"
-nfd = "0.0.4"
 
 # `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
 # compared to the default allocator's ~10K. It is slower than the default

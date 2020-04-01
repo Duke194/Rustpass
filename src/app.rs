@@ -144,7 +144,12 @@ impl Component for App {
                 <div class="mdl-layout__drawer">
                     <span class="mdl-layout-title">{ "Rustpass" }</span>
                     <nav class="mdl-navigation">
-                    // Here is the folder tree
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--file">
+                        <input class="mdl-textfield__input" placeholder="File" type="text" id="uploadFile" readonly=true/>
+                        <div class="mdl-button mdl-button--primary mdl-button--icon mdl-button--file">
+                            <i class="material-icons">{"open_in_browser"}</i><input type="file" id="uploadBtn"/>
+                        </div>
+                    </div>
                     </nav>
                 </div>
                 <main class="mdl-layout__content">
