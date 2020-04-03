@@ -1,4 +1,5 @@
-![Node.js CI](https://github.com/Duke194/Rustpass/workflows/Node.js%20CI/badge.svg?branch=master)
+[![License](https://img.shields.io/badge/license-Apache%202-green)](https://choosealicense.com/licenses/apache-2.0/)
+[![Node.js CI](https://github.com/Duke194/Rustpass/workflows/Node.js%20CI/badge.svg?branch=master)](https://github.com/Duke194/Rustpass/actions?query=workflow%3A%22Node.js+CI%22)
 [![Build Status](https://travis-ci.org/Duke194/Rustpass.svg?branch=master)](https://travis-ci.org/Duke194/Rustpass)
 
 # Rustpass
